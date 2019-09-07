@@ -1,0 +1,47 @@
+{
+  "author": "quinton-ashley",
+  "bin": {
+    "json-combo": "./app.js"
+  },
+  "bugs": {
+    "url": "https://github.com/quinton-ashley/json-combo/issues"
+  },
+  "contributors": [
+    {
+      "name": "Quinton Ashley",
+      "email": "qashto@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "deep-extend": "^0.6.0"
+  },
+  "description": "json-combo is a front-end for video game emulators, use it to install and auto-update texture packs!",
+  "devDependencies": {},
+  "entry point": "app.js",
+  "keywords": [
+    "app"
+  ],
+  "license": "MIT",
+  "main": "app.js",
+  "maintainers": [
+    {
+      "name": "Quinton Ashley",
+      "email": "qashto@gmail.com"
+    }
+  ],
+  "name": "json-combo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinton-ashley/json-combo.git"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up-outdated": "npm install --save $(npm outdated | cut -d ' ' -f -1 | sed '1d' | sed 's/$/@*/')",
+    "v": "npm version patch --force",
+    "version": "git add -A",
+    "postversion": "git push",
+    "V": "git push origin $npm_package_version && npm publish"
+  },
+  "version": "1.0.1"
+}
